@@ -169,18 +169,16 @@ IDEやエディタとの連携で面倒臭さを解消
   * 超楽でした。複数人での作業に非常に強力な味方になってくれますね。
   * https://github.com/dekokun/git/commits/master
 
-## あなたも有名なOSSに自分のコードを取り込んでもらおう！
-
-* https://github.com/heroku/heroku/pull/235
-  * バグを出してしまいましたが、それでも感謝してもらえました…(悔しい)
-
-## Githubアカウントを取ろう
-
-### Githubとは
+### そもそもGithubとは
 
 * 中央リポジトリを作成してくれるサイト
 * オープンソースの開発も結構この上で行われている
 * ソースコードの歴史などがWeb上で閲覧可能 例:https://github.com/dekokun/TDD/commits/master/test.js
+
+## あなたも有名なOSSに自分のコードを取り込んでもらおう！
+
+* https://github.com/heroku/heroku/pull/235
+  * バグを出してしまいましたが、それでも感謝してもらえました…(悔しい)
 
 ## 発展的課題
 
