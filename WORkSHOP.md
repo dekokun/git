@@ -63,13 +63,13 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   * gitコンフィグの設定(自分の名前とメアドの設定)
 
   ```
-  自分の名前と会社のメールアドレスを設定してください
+  自分の名前と会社のメールアドレスを設定してください。FQDNはうちのドメイン名です。
   $ git config --global user.name "foo_bar"
-  $ git config --global user.email "foo_bar@cybird.co.jp"
+  $ git config --global user.email "foo_bar@FQDN"
   $ git config -l
   →自分の名前とメールアドレスが表示されればOKです
   user.name=foo_bar
-  user.email=foo_bar@cybird.co.jp
+  user.email=foo_bar@FQDN
   ```
 
   * credential-osxkeychain の設定
