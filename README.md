@@ -154,3 +154,10 @@ IDEやエディタとの連携で面倒臭さを解消
 * サインアップしよう https://github.com/
 * Plans, Pricing and Signupボタンを押下して無料プランをどうぞ
 
+## 発展的課題
+
+* 以下をcloneし、READMEの指示に従って全てのテストを通してください
+  * https://github.com/dekokun/TDD.git
+* できたら元のリポジトリ(https://github.com/dekokun/TDD)に対してプルリクエスト(ググれ)を送ってみてください
+* 後日、私が回答のコミットをpushします
+
