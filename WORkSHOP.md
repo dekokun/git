@@ -107,6 +107,35 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   事前にgit configで設定したuser名とメールアドレスを入力しｔアカウントを作成します
   ![alt text](https://github.com/umiyosh/git/blob/master/img/ins003.jpg?raw=true)
 
+  * 鍵の作成と登録
+  Macにて鍵を作成します。
+  パスフレーズを聞かれますが、何も入れずに公開鍵を生成してください。
+
+  ```
+  $ ssh-keygen -t rsa
+  Generating public/private rsa key pair.
+  Enter file in which to save the key (/home/n99999/.ssh/id_rsa): →何も入力しないでEner
+   Enter passphrase (empty for no passphrase): →何も入力しないでEner
+   Enter same passphrase again:→何も入力しないでEner
+   Your identification has been saved in /home/n99999/.ssh/id_rsa.
+   Your public key has been saved in /home/n99999/.ssh/id_rsa.pub.
+   The key fingerprint is:
+   00:f0:81:06:d6:79:0d:13:9f:2b:b2:20:cd:a9:f4:fb n99999@yoshfront
+   The key's randomart image is:
+  ```
+
+  以下コマンドにて公開鍵をクリップボードにコピーしておきてください。
+
+  ```
+  cat ~/.ssh/id_rsa.pub
+  ```
+
+  [GitHub](https://github.com/)にアクセスして、公開鍵を登録してください。
+  1, 2, 3の順序で押下します。
+  ![alt text](https://github.com/umiyosh/git/blob/master/img/ins004.jpg?raw=true)
+  以下のような画面が出るので、タイトルに任意の名称を入力し、公開鍵を登録してください。
+  ![alt text](https://github.com/umiyosh/git/blob/master/img/ins005.jpg?raw=true)
+
 ## 研修用資料
 
 * [Title](https://github.com/umiyosh/git/blob/master/README.md)
