@@ -1,4 +1,4 @@
-# 発展的課題
+# One More Thing
 
 * 以下をcloneし、READMEの指示に従って全てのテストを通してください
   * https://github.com/dekokun/TDD.git
