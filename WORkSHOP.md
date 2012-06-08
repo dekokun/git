@@ -262,7 +262,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   CONFLICT (content): Merge conflict in README
   Automatic merge failed; fix conflicts and then commit the result.
   ```
-  REDMEのな神はコンフリクトした行に<code><<<<<<< HEAD</code>、 <code>=======</code>,  <code>>>>>>>> COMMITID</code>
+  READMEの中身はコンフリクトした行に<code><<<<<<< HEAD</code>、 <code>=======</code>,  <code>>>>>>>> COMMITID</code>
   のようなマーカーが保存されてます。具体的には以下のようになっています。
 
   ```
