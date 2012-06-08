@@ -72,6 +72,32 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   user.email=foo_bar@cybird.co.jp
   ```
 
+  * credential-osxkeychain の設定
+
+  以下のコマンドを入力してusageが返ってくるか試してください
+
+  ```
+  $ git credential-osxkeychain
+  # Usage: git credential-osxkeychain <get|store|erase>
+  ```
+
+  ※ 出なかった場合はブラウザから以下をDownload後、ターミナルから次のコマンドを打ってください
+  http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
+
+  ```
+  $ mv ~/Downloads/git-credential-osxkeychain /usr/local/bin/
+  $ chmod +x /usr/local/bin/git-credential-osxkeychain
+  ```
+
+  credential-osxkeychain導入後 git configにosxkeychainの設定を行なってださい。
+
+  ```
+  $ git config --global credential.helper osxkeychain
+  $ git config -l
+  →以下が表示に含まれていればOKです
+  credential.helper=osxkeychain
+  ```
+
 ## 研修用資料
 
 * [Title](https://github.com/umiyosh/git/blob/master/README.md)
