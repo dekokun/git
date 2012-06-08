@@ -12,9 +12,15 @@
 ```
 $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
 ```
+
+  * xcodeインストール
+
+  ホワイトボードのpathにあるdmgファイルを実行してインストールしてください。
+
   * Preferences-Download-Command Line Tools
 
   XCodeを開いて Preferences-Download-Command Line Toolsをダウンロード
+![alt text](https://github.com/umiyosh/git/blob/master/img/ins001.jpg?raw=true)
 
 #### gitインストール
 
@@ -42,7 +48,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   ````
 
 > 対処:
-> $ sudo ln -s /Applications/Xcode.app/Contents/Developer /Developer
+> <code>$ sudo ln -s /Applications/Xcode.app/Contents/Developer /Developer</code>
 
   * MacPortsを使っている人
 
