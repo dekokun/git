@@ -239,7 +239,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
 
   ```
   $  git pull origin master
-  From github.com:umiyosh/git
+  From https://github.com/dekokun/trainingA.git
    * branch            master     -> FETCH_HEAD
   Already up-to-date.
   $  git push origin master
