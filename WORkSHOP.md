@@ -198,7 +198,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   # Changes to be committed:
   #   (use "git reset HEAD <file>..." to unstage)
   #
-  #       modified:   hoge
+  #       modified:   README
   #
   ```
 
@@ -207,6 +207,30 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   アンステージできます。
 
   * 編集してcommitしてみよう:コミット
+  <code>git commit</code>でcommitできます。
+  ```
+  $ git commit -m 'XXXXのための変更'
+  [master 5e0cf17] XXXXのための変更
+   1 files changed, 1 insertions(+), 0 deletions(-)
+  ```
+
+  <code>git log</code>でcommitログが参照できます。
+
+  ```
+  $ git log
+  commit 5e0cf179549dc74a92bba65cca7b432b0c07beaf
+  Author: foo_bar <foo_bar@FQDN>
+  Date:   Fri Jun 8 17:30:33 2012 +0900
+
+      XXXXのための変更
+
+  commit 1be8836ad569d99a543f44d4ee589a51d58d3f20
+  Author: foo_bar <foo_bar@FQDN>
+  Date:   Fri Jun 8 17:15:15 2012 +0900
+
+      initial commit
+  ```
+
   * リモートにpushしてみよう
 
 ## 研修用資料
