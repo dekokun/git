@@ -139,7 +139,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
 
   <<課題リポジトリの登録をこちらで行います。休憩してください。>>
 
-### 講義で覚えたコマンドのおさらい
+#### 講義で覚えたコマンドのおさらい
 
   * GitHubアカウントで課題リポジトリを、見てみよう。
   [GitHub](https://github.com/)にアクセスして、自分のリポジトリを確認してください。
@@ -334,7 +334,25 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   $ git diff
   ```
 
-## 研修用資料
+#### グループワーク
+  チームリポジトリで共同作業を体験しましょう。
+  以下のテーマで各自READMEファイルを修正して、最終的に発表してもらいます。フォーマットは自由です。
 
-* [Title](https://github.com/dekokun/git/blob/master/README.md)
+  * チームメンバーの自己紹介(名前, 興味のあること。趣味なり技術ネタなり, 本日学習したことの感想 , 今後の抱負 )
+  * 上記はチームメンバーが自分の文を編集してcommitしてください
+  * チームリーダーは、以下の総括についてもまとめてください。
+    1. VCSの利点 チームとしての総括まとめ
+    2. 面白いcommitログの紹介
+    3. 本日の学習成果 チームとしての総括まとめ
+
+  * 作成したアウトプットは以下の形式で発表します。
+    1. 自分の担当分についてはチームメンバ各自で発表します。
+    2. チームリーダーは自己紹介+チーム総括を発表します。
+
+  各自でコンフリクトがおきたさいは解決して中央リポジトリに反映を行い共同作業を行なってください。
+  余力があるチームは[ markdown ](http://blog.2310.net/archives/6)を使い、シンプルでリッチなREADMEを作成してくみてください。
+
+### より深めたい人へ
+ Pro Git(無料のPDF)は読みやすく、深めることができるので興味があるひとは読んで見ることをおすすめします！
+* [Pro Git](https://docs.google.com/file/d/0BxkaLAGEeWgLNDRhYzQ3MDgtNmQ1NC00ODZiLThmYzYtYmJlYWE5YzY2Mjkw/edit?hl=en&pli=1)
 
