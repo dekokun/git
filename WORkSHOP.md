@@ -27,7 +27,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   * homebrewインストールした人
 
   ```
-  $ brew install git
+  $ sudo brew install git
   ```
 
 **こんなの出た人がいたら、呼んでください その1**
@@ -36,7 +36,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   Cowardly refusing to sudo brew
   ```
 
-> 原因:/usr/localのパーミッションが怪しい
+/usr/localのパーミッションが怪しい
 > 対処:
 > <code>$ sudo chown -R root /usr/local</code>
 
@@ -57,7 +57,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   * MacPortsを使っている人
 
   ```
-  $ port install git
+  $ sudo port install git-core +gitweb +svn
   ```
 
   * gitコンフィグの設定(自分の名前とメアドの設定)
