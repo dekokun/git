@@ -1,9 +1,10 @@
-# VCS研修 WORKSHOP
+# バージョン管理システム研修 WORKSHOP
 ## 環境構築
 ###  開発環境導入
 #### 社外アクセス用のproxyの設定
 
-パッケージマネージャなどが社外アクセスするため、社外アクセス用のProxyを設定します。ホワイトボードのコマンドを実行してください。
+パッケージマネージャなどが社外アクセスするため、社外アクセス用のProxyを設定します。
+ホワイトボードurlにアクセスしwikiに書いてあるproxy設定のコマンドを各自のターミナルで実行してください。
 
 #### パッケージマネージャのインストール
 
@@ -138,7 +139,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
 
   <<課題リポジトリの登録をこちらで行います。休憩してください。>>
 
-### 講義で覚えたコマンドのおさらい
+#### 講義で覚えたコマンドのおさらい
 
   * GitHubアカウントで課題リポジトリを、見てみよう。
   [GitHub](https://github.com/)にアクセスして、自分のリポジトリを確認してください。
@@ -238,7 +239,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
 
   ```
   $  git pull origin master
-  From github.com:umiyosh/git
+  From https://github.com/dekokun/trainingA.git
    * branch            master     -> FETCH_HEAD
   Already up-to-date.
   $  git push origin master
@@ -261,7 +262,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   CONFLICT (content): Merge conflict in README
   Automatic merge failed; fix conflicts and then commit the result.
   ```
-  REDMEのな神はコンフリクトした行に<code><<<<<<< HEAD</code>、 <code>=======</code>,  <code>>>>>>>> COMMITID</code>
+  READMEの中身はコンフリクトした行に<code><<<<<<< HEAD</code>、 <code>=======</code>,  <code>>>>>>>> COMMITID</code>
   のようなマーカーが保存されてます。具体的には以下のようになっています。
 
   ```
@@ -305,7 +306,53 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
 
   マージが完了したら、<code>git push origin master</code>して中央リポジトリに変更を反映してください。
 
-## 研修用資料
+  * 巻き戻しあれこれ
+  ローカルで１コミット(編集→ add → commit ) 刻んで、巻き戻しのいろいろをやってみましょう。
 
-* [Title](https://github.com/dekokun/git/blob/master/README.md)
+  commitログの書き直しをやってみてください。
+
+  ```
+  $ git commit --amend
+  ```
+
+  commitの巻き戻しをやってみましょう。<code>git log</code>, で直前のcommit ID(ハッシュ値)をコピーしておいてください。
+  --softは、commitを巻き戻してワークツリーには編集内容を残すというものです。
+  ※本当はHEADを使って、簡単にnコミット前に戻すということもできますが、今回の研修ではrebaseやbranchの使い方などは除外しているためマージ後の樹形図がすこしごちゃごちゃしていると思います。ちょっとめんどうですがこのやり方でやってください。興味がある方は後述のpro GITを読んで、定番のワークフローを理解した後、自分で試すと良いでしょう。
+
+  ```
+  $ git resest <COMMITID> --soft
+  $ git status
+  $ git diff
+  ```
+
+  もういちど、commitを行った後、commitの強制巻き戻しをやってみましょう。<code>git log</code>, で直前のcommit ID(ハッシュ値)をコピーしておいてください。
+  --hardは、commitを巻き戻してワークツリーの編集も強制的に巻き戻します。
+
+  ```
+  $ git resest <COMMITID> --hard
+  $ git status
+  $ git diff
+  ```
+
+#### グループワーク
+  チームリポジトリで共同作業を体験しましょう。
+  以下のテーマで各自READMEファイルを修正して、最終的に発表してもらいます。フォーマットは自由です。
+
+  * チームメンバーの自己紹介(名前, 興味のあること。趣味なり技術ネタなり, 本日学習したことの感想 , 今後の抱負 )
+  * 上記はチームメンバーが自分の文を編集してcommitしてください
+  * チームリーダーは、以下の総括についてもまとめてください。
+    1. VCSの利点 チームとしての総括まとめ
+    2. 面白いcommitログの紹介
+    3. 本日の学習成果 チームとしての総括まとめ
+
+  * 作成したアウトプットは以下の形式で発表します。
+    1. 自分の担当分についてはチームメンバ各自で発表します。
+    2. チームリーダーは自己紹介+チーム総括を発表します。
+
+  各自でコンフリクトがおきたさいは解決して中央リポジトリに反映を行い共同作業を行なってください。
+  余力があるチームは[ markdown ](http://blog.2310.net/archives/6)を使い、シンプルでリッチなREADMEを作成してくみてください。
+
+### より深めたい人へ
+ Pro Git(無料のPDF)は読みやすく、深めることができるので興味があるひとは読んで見ることをおすすめします！
+* [Pro Git](https://docs.google.com/file/d/0BxkaLAGEeWgLNDRhYzQ3MDgtNmQ1NC00ODZiLThmYzYtYmJlYWE5YzY2Mjkw/edit?hl=en&pli=1)
 
