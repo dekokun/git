@@ -136,6 +136,29 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   以下のような画面が出るので、タイトルに任意の名称を入力し、公開鍵を登録してください。
   ![alt text](https://github.com/umiyosh/git/blob/master/img/ins005.jpg?raw=true)
 
+  <<課題リポジトリの登録をこちらで行います。休憩してください。>>
+
+### 講義で覚えたコマンドのおさらい
+
+  * GitHubアカウントで課題リポジトリを、見てみよう。
+  [GitHub](https://github.com/)にアクセスして、自分のリポジトリを確認してください。
+  以下からリポジトリ、にアクセスできます。
+  ![alt text](https://github.com/umiyosh/git/blob/master/img/rev001.jpg?raw=true)
+
+  リポジトリの画面の簡単な説明。
+  ![alt text](https://github.com/umiyosh/git/blob/master/img/rev002.jpg?raw=true)
+  他にもいろいろ、ありますがいまのところこれだけ覚えてください。
+
+  * チームリポジトリをcloneしてみよう
+  ターミナルから以下コマンドを実行して、ローカルにcloneしてください。
+
+  ```
+  $ cd 作業ディレクトリ
+  $ git clone https://github.com/dekokun/trainingA.git
+  $ ls -la trainingA
+  $ cd trainingA
+  ```
+
 ## 研修用資料
 
 * [Title](https://github.com/umiyosh/git/blob/master/README.md)
