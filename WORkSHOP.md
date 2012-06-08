@@ -232,6 +232,78 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   ```
 
   * リモートにpushしてみよう
+  リモートの変更を取り込んで<code>git pull origin master</code>, 自分の変更をリモートに反映<code>git push origin master</code>します。
+  チームメンバー４人の<code>git push origin master</code>する順番を決めてください。
+  リモートに変更が無いので、一人目のpushはなにもおこらず、うまくいくはずです。
+
+  ```
+  $  git pull origin master
+  From github.com:umiyosh/git
+   * branch            master     -> FETCH_HEAD
+  Already up-to-date.
+  $  git push origin master
+  To https://github.com/dekokun/trainingA.git
+     1be8836..5e0cf17 master -> master
+  ```
+
+  チームメンバーの人が同じ行を編集しているので必ずコンフリクトします。
+  二人目以降からはコンフリクトを解決しましょう。以下のように機械的に解決できないCONFLICTが起きたよとgitが言ってます。
+
+  ```
+  $  git pull origin master
+  remote: Counting objects: 5, done.
+  remote: Compressing objects: 100% (2/2), done.
+  remote: Total 3 (delta 1), reused 3 (delta 1)
+  Unpacking objects: 100% (3/3), done.
+  From github.com:umiyosh/git
+   * branch            master     -> FETCH_HEAD
+  Auto-merging WORkSHOP.md
+  CONFLICT (content): Merge conflict in README
+  Automatic merge failed; fix conflicts and then commit the result.
+  ```
+  REDMEのな神はコンフリクトした行に<code><<<<<<< HEAD</code>、 <code>=======</code>,  <code>>>>>>>> COMMITID</code>
+  のようなマーカーが保存されてます。具体的には以下のようになっています。
+
+  ```
+  <<<<<<< HEAD
+  なんらかの編集行01
+  なんらかの編集行01
+  =======
+  なんらかの編集行02
+  なんらかの編集行02
+  なんらかの編集行02
+  >>>>>>> 224ba17dc5e2b24417ed675bd4a52381b93dede6
+  ```
+
+  この中から残したい行を残し(あるいは両方残し)、マーカーの部分を削除して保存してください。
+  保存後に<code>git status</code>を打つと以下のように表示されます。
+
+  ````
+  # On branch umiwk
+  # Unmerged paths:
+  #   (use "git add/rm <file>..." as appropriate to mark resolution)
+  #
+  #       both modified:      README
+  #
+  no changes added to commit (use "git add" and/or "git commit -a")
+  ```
+
+  表示されてるように<code>git add <FILE名></code>と打てばChange to be commitedになります。
+  そのまま<code>git commit</code>。エディタが起動してマージcommitログを刻めます。
+
+  ```
+  1 Merge branch 'master' of github.com:umiyosh/git into umiwk
+  2
+  3 Conflicts:
+  4 >README
+  5 #
+  6 # It looks like you may be committing a merge.
+  7 # If this is not correct, please remove the file
+  8 #>.git/MERGE_HEAD
+  9 # and try again.
+  ```
+
+  マージが完了したら、<code>git push origin master</code>して中央リポジトリに変更を反映してください。
 
 ## 研修用資料
 
