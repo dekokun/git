@@ -159,6 +159,56 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   $ cd trainingA
   ```
 
+  * 編集してcommitしてみよう:ステージ
+  READMEを任意の内容で各自編集してください。１行適当なコメントを書くだけで良いです。
+  <code>$ git status</code> を打ってみてください。未commitのファイルが表示されます。
+  「Changes not staged for commit:」と表示されます。
+  ```
+  # On branch master
+  # Changes not staged for commit:
+  #   (use "git add <file>..." to update what will be committed)
+  #   (use "git checkout -- <file>..." to discard changes in working directory)
+  #
+  #       modified:   WORkSHOP.md
+  #
+  no changes added to commit (use "git add" and/or "git commit -a")
+  ```
+
+  差分を見たいときは<code>git diff</code>を打ってください。ワークツリーと先頭commitとの差分が表示されます。
+
+  ```
+  diff --git a/README b/README
+  index 2262de0..e42f4ce 100644
+  --- a/README
+  +++ b/README
+  @@ -1 +1,2 @@
+   hoge
+  +fuga
+  ```
+
+  +が追加された行です。
+  -が削除された行です。
+
+  <code>git add <FILE名></code>でindexにステージします。
+  <code>git status</code>を打ってみてください。「Changes to be committed:」という表示に変わっています。
+  この状態でローカルにcommit可能となります。
+
+  ```
+  # On branch master
+  # Changes to be committed:
+  #   (use "git reset HEAD <file>..." to unstage)
+  #
+  #       modified:   hoge
+  #
+  ```
+
+  また、ステージされたファイルと先頭commitの差分を見る場合は<code>git diff --cached</code>と打ってください。
+  なお、間違えてgit add してしまった場合は上記に表示されているように<code>git reset HEAD <file>...</code>で
+  アンステージできます。
+
+  * 編集してcommitしてみよう:コミット
+  * リモートにpushしてみよう
+
 ## 研修用資料
 
 * [Title](https://github.com/umiyosh/git/blob/master/README.md)
