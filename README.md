@@ -149,11 +149,6 @@ IDEやエディタとの連携で面倒臭さを解消
 * オープンソースの開発も結構この上で行われている
 * ソースコードの歴史などがWeb上で閲覧可能 例:https://github.com/dekokun/TDD/commits/master/test.js
 
-### アカウント作成
-
-* サインアップしよう https://github.com/
-* Plans, Pricing and Signupボタンを押下して無料プランをどうぞ
-
 ## 発展的課題
 
 * 以下をcloneし、READMEの指示に従って全てのテストを通してください
