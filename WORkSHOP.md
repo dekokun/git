@@ -98,6 +98,15 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   credential.helper=osxkeychain
   ```
 
+  * GitHubアカウント作成
+  [GitHub](https://github.com/)にアクセスして、アカウントを作成します。
+
+  トップページから<code>Signup and Pricing</code>を押下し、<code>Create a free account</code>を選びます
+  ![alt text](https://github.com/umiyosh/git/blob/master/img/ins002.jpg?raw=true)
+
+  事前にgit configで設定したuser名とメールアドレスを入力しｔアカウントを作成します
+  ![alt text](https://github.com/umiyosh/git/blob/master/img/ins003.jpg?raw=true)
+
 ## 研修用資料
 
 * [Title](https://github.com/umiyosh/git/blob/master/README.md)
