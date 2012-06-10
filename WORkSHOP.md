@@ -326,7 +326,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   commitの巻き戻しをやってみましょう。<code>git log</code>, で直前のcommit ID(ハッシュ値)をコピーしておいてください。
   --softは、commitを巻き戻してワークツリーには編集内容を残すというものです。
 
-  ※本当はHEADを使って、簡単にnコミット前に戻すということもできますが、今回の研修ではrebaseやbranchの使い方などは除外しているためマージ後の樹形図がすこしごちゃごちゃしていると思います。ちょっとめんどうですがこのやり方でやってください。興味がある方は後述のpro GITを読んで、定番のワークフローを理解した後、自分で試すと良いでしょう。
+  ※本当はHEADを使って、簡単にnコミット前に戻すということもできますが、今回の研修ではrebaseやbranchの使い方などは除外しているためマージ後の樹形図がすこしごちゃごちゃしていると思います。ちょっとめんどうですがこのやり方でやってください。興味がある方は後述の[ProGit](https://github.com/dekokun/git/blob/master/WORkSHOP.md#%E3%82%88%E3%82%8A%E6%B7%B1%E3%82%81%E3%81%9F%E3%81%84%E4%BA%BA%E3%81%B8)を読んで、定番のワークフローを理解した後、自分で試すと良いでしょう。
 
   ```
   $ git resest <COMMITID> --soft
