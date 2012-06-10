@@ -127,7 +127,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
    The key's randomart image is:
   ```
 
-  以下コマンドにて公開鍵をクリップボードにコピーしておきてください。
+  以下コマンドにて公開鍵をクリップボードにコピーしておいてください。
 
   ```
   cat ~/.ssh/id_rsa.pub
@@ -164,10 +164,10 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   $ cd trainingA
   ```
 
-  * 編集してcommitしてみよう:ステージ
+  * 編集してcommitしてみよう:ステージ編
 
   READMEを任意の内容で各自編集してください。１行適当なコメントを書くだけで良いです。
-  <code>$ git status</code> を打ってみてください。未commitのファイルが表示されます。
+  <code>git status</code> を打ってみてください。未commitのファイルが表示されます。
   「Changes not staged for commit:」と表示されます。
   ```
   # On branch master
