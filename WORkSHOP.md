@@ -1,12 +1,11 @@
 # バージョン管理システム研修 WORKSHOP
-## 環境構築
-###  開発環境導入
-#### 社外アクセス用のproxyの設定
+## git環境構築
+### 社外アクセス用のproxyの設定
 
 パッケージマネージャなどが社外アクセスするため、社外アクセス用のProxyを設定します。
 ホワイトボードurlにアクセスしwikiに書いてあるproxy設定のコマンドを各自のターミナルで実行してください。
 
-#### パッケージマネージャのインストール
+### パッケージマネージャのインストール
 
   * homebrewインストール
 
@@ -23,7 +22,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   XCodeを開いて Preferences-Download-Command Line Toolsをダウンロード
 ![alt text](https://github.com/dekokun/git/blob/master/img/ins001.jpg?raw=true)
 
-#### gitインストール
+### gitインストール
 
   * homebrewインストールした人
 
@@ -141,7 +140,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
 
   <<課題リポジトリの登録をこちらで行います。休憩してください。>>
 
-#### 講義で覚えたコマンドのおさらい
+## 講義で覚えたコマンドのおさらい
 
   * GitHubアカウントで課題リポジトリを、見てみよう。
 
@@ -343,7 +342,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   $ git diff
   ```
 
-#### グループワーク
+## グループワーク
   チームリポジトリで共同作業を体験しましょう。
   以下のテーマで各自READMEファイルを修正して、最終的に発表してもらいます。
   フォーマットは、テキスト形式で作成してください。
@@ -373,7 +372,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
 
   [ OneMoreThing ](https://github.com/dekokun/git/blob/master/one-more-thing.md)に記載されているTDDベースのcommit作業を行なってみてください。より実践的なGitの使い方が理解できます。
 
-### より深めたい人へ
+## より深めたい人へ
  Pro Git(無料のPDF)は読みやすく、深めることができるので興味があるひとは読んで見ることをおすすめします！
 * [Pro Git](https://docs.google.com/file/d/0BxkaLAGEeWgLNDRhYzQ3MDgtNmQ1NC00ODZiLThmYzYtYmJlYWE5YzY2Mjkw/edit?hl=en&pli=1)
 
