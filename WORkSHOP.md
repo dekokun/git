@@ -167,7 +167,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
 
   READMEを任意の内容で各自編集してください。１行適当なコメントを書くだけで良いです。
   <code>git status</code> を打ってみてください。未commitのファイルが表示されます。
-  「Changes not staged for commit:」と表示されます。
+  <code>Changes not staged for commit:</code>と表示されます。
   ```
   # On branch master
   # Changes not staged for commit:
@@ -195,7 +195,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   -が削除された行です。
 
   <code>git add <FILE名></code>でindexにステージします。
-  <code>git status</code>を打ってみてください。「Changes to be committed:」という表示に変わっています。
+  <code>git status</code>を打ってみてください。<code>Changes to be committed:</code>という表示に変わっています。
   この状態でローカルにcommit可能となります。
 
   ```
