@@ -30,17 +30,17 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   $ brew install git
   ```
 
-**こんなの出た人がいたら、呼んでください その1**
+  **こんなの出た人がいたら、呼んでください その1**
 
   ```
   Cowardly refusing to sudo brew
   ```
 
-/usr/localのパーミッションが怪しい
-> 対処:
-> <code>$ sudo chown -R root /usr/local</code>
+  /usr/localのパーミッションが怪しい
+  > 対処:
+  > <code>$ sudo chown -R root /usr/local</code>
 
-**こんなの出た人がいたら、呼んでください その2**
+  **こんなの出た人がいたら、呼んでください その2**
 
   ```
   giomime.c:68:10: fatal error: '/Developer/Headers/FlatCarbon/Files.h' file not found
@@ -51,8 +51,8 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   $ /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
   ````
 
-> 対処:
-> <code>$ sudo ln -s /Applications/Xcode.app/Contents/Developer /Developer</code>
+  > 対処:
+  > <code>$ sudo ln -s /Applications/Xcode.app/Contents/Developer /Developer</code>
 
   * MacPortsを使っている人
 
