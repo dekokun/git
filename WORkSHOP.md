@@ -100,6 +100,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   ```
 
   * GitHubアカウント作成
+
   [GitHub](https://github.com/)にアクセスして、アカウントを作成します。
 
   トップページから<code>Signup and Pricing</code>を押下し、<code>Create a free account</code>を選びます
@@ -109,6 +110,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   ![alt text](https://github.com/dekokun/git/blob/master/img/ins003.jpg?raw=true)
 
   * 鍵の作成と登録
+
   Macにて鍵を作成します。
   パスフレーズを聞かれますが、何も入れずに公開鍵を生成してください。
 
@@ -142,6 +144,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
 #### 講義で覚えたコマンドのおさらい
 
   * GitHubアカウントで課題リポジトリを、見てみよう。
+
   [GitHub](https://github.com/)にアクセスして、自分のリポジトリを確認してください。
   以下からリポジトリ、にアクセスできます。
   ![alt text](https://github.com/dekokun/git/blob/master/img/rev001.jpg?raw=true)
@@ -151,6 +154,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   他にもいろいろ、ありますがいまのところこれだけ覚えてください。
 
   * チームリポジトリをcloneしてみよう
+
   ターミナルから以下コマンドを実行して、ローカルにcloneしてください。
 
   ```
@@ -161,6 +165,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   ```
 
   * 編集してcommitしてみよう:ステージ
+
   READMEを任意の内容で各自編集してください。１行適当なコメントを書くだけで良いです。
   <code>$ git status</code> を打ってみてください。未commitのファイルが表示されます。
   「Changes not staged for commit:」と表示されます。
@@ -208,6 +213,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   アンステージできます。
 
   * 編集してcommitしてみよう:コミット
+
   <code>git commit</code>でcommitできます。
   ```
   $ git commit -m 'XXXXのための変更'
@@ -233,6 +239,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   ```
 
   * リモートにpushしてみよう
+
   リモートの変更を取り込んで<code>git pull origin master</code>, 自分の変更をリモートに反映<code>git push origin master</code>します。
   チームメンバー４人の<code>git push origin master</code>する順番を決めてください。
   リモートに変更が無いので、一人目のpushはなにもおこらず、うまくいくはずです。
@@ -307,6 +314,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   マージが完了したら、<code>git push origin master</code>して中央リポジトリに変更を反映してください。
 
   * 巻き戻しあれこれ
+
   ローカルで１コミット(編集→ add → commit ) 刻んで、巻き戻しのいろいろをやってみましょう。
 
   commitログの書き直しをやってみてください。
@@ -317,6 +325,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
 
   commitの巻き戻しをやってみましょう。<code>git log</code>, で直前のcommit ID(ハッシュ値)をコピーしておいてください。
   --softは、commitを巻き戻してワークツリーには編集内容を残すというものです。
+
   ※本当はHEADを使って、簡単にnコミット前に戻すということもできますが、今回の研修ではrebaseやbranchの使い方などは除外しているためマージ後の樹形図がすこしごちゃごちゃしていると思います。ちょっとめんどうですがこのやり方でやってください。興味がある方は後述のpro GITを読んで、定番のワークフローを理解した後、自分で試すと良いでしょう。
 
   ```
@@ -357,9 +366,11 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   各自でコンフリクトがおきたさいは解決して中央リポジトリに反映を行い共同作業を行なってください。
 
   * 余力があるチームへ
-  余力があるチームは[ markdown ](http://blog.2310.net/archives/6)を使い、シンプルでリッチなREADMEを作成してくみてください。
+
+   余力があるチームは[ markdown ](http://blog.2310.net/archives/6)を使い、シンプルでリッチなREADMEを作成してくみてください。
 
   * さらに余力があるハカー的なチームへ
+
   [ OneMoreThing ](https://github.com/dekokun/git/blob/master/one-more-thing.md)に記載されているTDDベースのcommit作業を行なってみてください。より実践的なGitの使い方が理解できます。
 
 ### より深めたい人へ
