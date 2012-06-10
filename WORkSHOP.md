@@ -122,7 +122,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
    Your identification has been saved in /home/n99999/.ssh/id_rsa.
    Your public key has been saved in /home/n99999/.ssh/id_rsa.pub.
    The key fingerprint is:
-   00:f0:81:06:d6:79:0d:13:9f:2b:b2:20:cd:a9:f4:fb n99999@yoshfront
+   xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx n99999@xxxxxxxxx
    The key's randomart image is:
   ```
 
