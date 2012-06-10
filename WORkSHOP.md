@@ -27,7 +27,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   * homebrewインストールした人
 
   ```
-  $ sudo brew install git
+  $ brew install git
   ```
 
 **こんなの出た人がいたら、呼んでください その1**
