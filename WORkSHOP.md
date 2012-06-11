@@ -116,9 +116,9 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   ```
   $ ssh-keygen -t rsa
   Generating public/private rsa key pair.
-  Enter file in which to save the key (/home/n99999/.ssh/id_rsa): →何も入力しないでEner
-   Enter passphrase (empty for no passphrase): →何も入力しないでEner
-   Enter same passphrase again:→何も入力しないでEner
+  Enter file in which to save the key (/home/n99999/.ssh/id_rsa): →何も入力しないでEnter
+   Enter passphrase (empty for no passphrase): →何も入力しないでEnter
+   Enter same passphrase again:→何も入力しないでEnter
    Your identification has been saved in /home/n99999/.ssh/id_rsa.
    Your public key has been saved in /home/n99999/.ssh/id_rsa.pub.
    The key fingerprint is:
@@ -213,7 +213,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
 
   * 編集してcommitしてみよう:コミット
 
-  <code>git commit</code>でcommitできます。
+  <code>git commit -m 'XXXのための修正'</code>でcommitできます。
   ```
   $ git commit -m 'XXXXのための変更'
   [master 5e0cf17] XXXXのための変更
@@ -295,8 +295,8 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   no changes added to commit (use "git add" and/or "git commit -a")
   ```
 
-  表示されてるように<code>git add <FILE名></code>と打てばChange to be commitedになります。
-  そのまま<code>git commit</code>。エディタが起動してマージcommitログを刻めます。
+  表示されてるように<code>git add <FILE名></code>と打てば<code>Change to be commited</code>になります。
+  そのまま<code>git commit -m 'マージしたよ'</code>。エディタが起動してマージcommitログを刻めます。
 
   ```
   1 Merge branch 'master' of github.com:umiyosh/git into umiwk
@@ -312,65 +312,33 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
 
   マージが完了したら、<code>git push origin master</code>して中央リポジトリに変更を反映してください。
 
-  * 巻き戻しあれこれ
-
-  ローカルで１コミット(編集→ add → commit ) 刻んで、巻き戻しのいろいろをやってみましょう。
-
-  commitログの書き直しをやってみてください。
-
-  ```
-  $ git commit --amend
-  ```
-
-  commitの巻き戻しをやってみましょう。<code>git log</code>, で直前のcommit ID(ハッシュ値)をコピーしておいてください。
-  --softは、commitを巻き戻してワークツリーには編集内容を残すというものです。
-
-  ※本当はHEADを使って、簡単にnコミット前に戻すということもできますが、今回の研修ではrebaseやbranchの使い方などは除外しているためマージ後の樹形図がすこしごちゃごちゃしていると思います。ちょっとめんどうですがこのやり方でやってください。興味がある方は後述の[ProGit](https://github.com/dekokun/git/blob/master/WORkSHOP.md#%E3%82%88%E3%82%8A%E6%B7%B1%E3%82%81%E3%81%9F%E3%81%84%E4%BA%BA%E3%81%B8)を読んで、定番のワークフローを理解した後、自分で試すと良いでしょう。
-
-  ```
-  $ git resest <COMMITID> --soft
-  $ git status
-  $ git diff
-  ```
-
-  もういちど、commitを行った後、commitの強制巻き戻しをやってみましょう。<code>git log</code>, で直前のcommit ID(ハッシュ値)をコピーしておいてください。
-  --hardは、commitを巻き戻してワークツリーの編集も強制的に巻き戻します。
-
-  ```
-  $ git resest <COMMITID> --hard
-  $ git status
-  $ git diff
-  ```
-
 ## グループワーク
   チームリポジトリで共同作業を体験しましょう。
-  以下のテーマで各自READMEファイルを修正して、最終的に発表してもらいます。
+  以下のテーマで各自READMEファイル, およびQUESTIONファイルを編集して、最終的に発表してもらいます。
   フォーマットは、テキスト形式で作成してください。
 
-  * 自分の自己紹介
+  * 自分の自己紹介をREADMEに書き加えてください
     1. 名前
     2. 興味のあること。趣味なり技術ネタなり
     3. 本日学習したことの感想
     4. 今後の抱負
   * 上記はチームメンバーが自分の文を編集してcommitしてください
-  * チームリーダーは、以下の総括についてもまとめてください。
-    1. VCSの利点 チームとしての総括まとめ
-    2. 面白いcommitログの紹介
-    3. 本日の学習成果 チームとしての総括まとめ
+  * 上記に加えてQUESTIONファイル(1ファイルにしてください)を新規作成し、チームメンバー各自が抱いたgitの疑問点をQUESTIONファイルに書き加えてください。
+  * この作業は40分行います。
 
-  * 作成したアウトプットは以下の形式で発表します。
-    1. 自分の担当分についてはチームメンバ各自で発表します。
-    2. チームリーダーは自己紹介+チーム総括を発表します。
+  * 作成したアウトプットは以下の形式で発表します
+    1. 自分の担当分についてはチームメンバ各自で発表します。(持ち時間:1分/一人)
+    2. QUESTIONは講師側で読み上げて回答します
 
   各自でコンフリクトがおきたさいは解決して中央リポジトリに反映を行い共同作業を行なってください。
 
   * 余力があるチームへ
 
-   余力があるチームは[ markdown ](http://blog.2310.net/archives/6)を使い、シンプルでリッチなREADMEを作成してくみてください。
+   余力があるチームは[ markdown ](http://blog.2310.net/archives/6)を使い、シンプルでリッチなREADME, QUESTIONを作成してくみてください。
 
   * さらに余力があるハカー的なチームへ
 
-  [ OneMoreThing ](https://github.com/dekokun/git/blob/master/one-more-thing.md)に記載されているTDDベースのcommit作業を行なってみてください。より実践的なGitの使い方が理解できます。
+  [ OneMoreThing ](https://github.com/dekokun/git/blob/master/one-more-thing.md)に記載されているTDDベースのcommit作業を行なってみてください。バグを混入させないようcommitを刻むといった, Gitの正しい使い方が理解できます。
 
 ## より深めたい人へ
  Pro Git(無料のPDF)は読みやすく、深めることができるので興味があるひとは読んで見ることをおすすめします！
