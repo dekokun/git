@@ -337,7 +337,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
 
   * さらに余力があるハカー的なチームへ
 
-  [ OneMoreThing ](https://github.com/dekokun/git/blob/master/one-more-thing.md)に記載されているTDDベースのcommit作業を行なってみてください。より実践的なGitの使い方が理解できます。
+  [ OneMoreThing ](https://github.com/dekokun/git/blob/master/one-more-thing.md)に記載されているTDDベースのcommit作業を行なってみてください。バグを混入させないようcommitを刻むといった, Gitの正しい使い方が理解できます。
 
 ## より深めたい人へ
  Pro Git(無料のPDF)は読みやすく、深めることができるので興味があるひとは読んで見ることをおすすめします！
