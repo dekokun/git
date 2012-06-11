@@ -1,12 +1,11 @@
 # バージョン管理システム研修 WORKSHOP
-## 環境構築
-###  開発環境導入
-#### 社外アクセス用のproxyの設定
+## git環境構築
+### 社外アクセス用のproxyの設定
 
 パッケージマネージャなどが社外アクセスするため、社外アクセス用のProxyを設定します。
 ホワイトボードurlにアクセスしwikiに書いてあるproxy設定のコマンドを各自のターミナルで実行してください。
 
-#### パッケージマネージャのインストール
+### パッケージマネージャのインストール
 
   * homebrewインストール
 
@@ -23,25 +22,25 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   XCodeを開いて Preferences-Download-Command Line Toolsをダウンロード
 ![alt text](https://github.com/dekokun/git/blob/master/img/ins001.jpg?raw=true)
 
-#### gitインストール
+### gitインストール
 
   * homebrewインストールした人
 
   ```
-  $ sudo brew install git
+  $ brew install git
   ```
 
-**こんなの出た人がいたら、呼んでください その1**
+  **こんなの出た人がいたら、呼んでください その1**
 
   ```
   Cowardly refusing to sudo brew
   ```
 
-/usr/localのパーミッションが怪しい
-> 対処:
-> <code>$ sudo chown -R root /usr/local</code>
+  /usr/localのパーミッションが怪しい
+  > 対処:
+  > <code>$ sudo chown -R root /usr/local</code>
 
-**こんなの出た人がいたら、呼んでください その2**
+  **こんなの出た人がいたら、呼んでください その2**
 
   ```
   giomime.c:68:10: fatal error: '/Developer/Headers/FlatCarbon/Files.h' file not found
@@ -52,8 +51,8 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   $ /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
   ````
 
-> 対処:
-> <code>$ sudo ln -s /Applications/Xcode.app/Contents/Developer /Developer</code>
+  > 対処:
+  > <code>$ sudo ln -s /Applications/Xcode.app/Contents/Developer /Developer</code>
 
   * MacPortsを使っている人
 
@@ -100,6 +99,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   ```
 
   * GitHubアカウント作成
+
   [GitHub](https://github.com/)にアクセスして、アカウントを作成します。
 
   トップページから<code>Signup and Pricing</code>を押下し、<code>Create a free account</code>を選びます
@@ -109,6 +109,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   ![alt text](https://github.com/dekokun/git/blob/master/img/ins003.jpg?raw=true)
 
   * 鍵の作成と登録
+
   Macにて鍵を作成します。
   パスフレーズを聞かれますが、何も入れずに公開鍵を生成してください。
 
@@ -121,11 +122,11 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
    Your identification has been saved in /home/n99999/.ssh/id_rsa.
    Your public key has been saved in /home/n99999/.ssh/id_rsa.pub.
    The key fingerprint is:
-   00:f0:81:06:d6:79:0d:13:9f:2b:b2:20:cd:a9:f4:fb n99999@yoshfront
+   xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx n99999@xxxxxxxxx
    The key's randomart image is:
   ```
 
-  以下コマンドにて公開鍵をクリップボードにコピーしておきてください。
+  以下コマンドにて公開鍵をクリップボードにコピーしておいてください。
 
   ```
   cat ~/.ssh/id_rsa.pub
@@ -139,9 +140,10 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
 
   <<課題リポジトリの登録をこちらで行います。休憩してください。>>
 
-#### 講義で覚えたコマンドのおさらい
+## 講義で覚えたコマンドのおさらい
 
   * GitHubアカウントで課題リポジトリを、見てみよう。
+
   [GitHub](https://github.com/)にアクセスして、自分のリポジトリを確認してください。
   以下からリポジトリ、にアクセスできます。
   ![alt text](https://github.com/dekokun/git/blob/master/img/rev001.jpg?raw=true)
@@ -151,6 +153,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   他にもいろいろ、ありますがいまのところこれだけ覚えてください。
 
   * チームリポジトリをcloneしてみよう
+
   ターミナルから以下コマンドを実行して、ローカルにcloneしてください。
 
   ```
@@ -160,10 +163,11 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   $ cd trainingA
   ```
 
-  * 編集してcommitしてみよう:ステージ
+  * 編集してcommitしてみよう:ステージ編
+
   READMEを任意の内容で各自編集してください。１行適当なコメントを書くだけで良いです。
-  <code>$ git status</code> を打ってみてください。未commitのファイルが表示されます。
-  「Changes not staged for commit:」と表示されます。
+  <code>git status</code> を打ってみてください。未commitのファイルが表示されます。
+  <code>Changes not staged for commit:</code>と表示されます。
   ```
   # On branch master
   # Changes not staged for commit:
@@ -191,7 +195,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   -が削除された行です。
 
   <code>git add <FILE名></code>でindexにステージします。
-  <code>git status</code>を打ってみてください。「Changes to be committed:」という表示に変わっています。
+  <code>git status</code>を打ってみてください。<code>Changes to be committed:</code>という表示に変わっています。
   この状態でローカルにcommit可能となります。
 
   ```
@@ -208,6 +212,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   アンステージできます。
 
   * 編集してcommitしてみよう:コミット
+
   <code>git commit</code>でcommitできます。
   ```
   $ git commit -m 'XXXXのための変更'
@@ -233,6 +238,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   ```
 
   * リモートにpushしてみよう
+
   リモートの変更を取り込んで<code>git pull origin master</code>, 自分の変更をリモートに反映<code>git push origin master</code>します。
   チームメンバー４人の<code>git push origin master</code>する順番を決めてください。
   リモートに変更が無いので、一人目のpushはなにもおこらず、うまくいくはずです。
@@ -307,6 +313,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   マージが完了したら、<code>git push origin master</code>して中央リポジトリに変更を反映してください。
 
   * 巻き戻しあれこれ
+
   ローカルで１コミット(編集→ add → commit ) 刻んで、巻き戻しのいろいろをやってみましょう。
 
   commitログの書き直しをやってみてください。
@@ -317,7 +324,8 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
 
   commitの巻き戻しをやってみましょう。<code>git log</code>, で直前のcommit ID(ハッシュ値)をコピーしておいてください。
   --softは、commitを巻き戻してワークツリーには編集内容を残すというものです。
-  ※本当はHEADを使って、簡単にnコミット前に戻すということもできますが、今回の研修ではrebaseやbranchの使い方などは除外しているためマージ後の樹形図がすこしごちゃごちゃしていると思います。ちょっとめんどうですがこのやり方でやってください。興味がある方は後述のpro GITを読んで、定番のワークフローを理解した後、自分で試すと良いでしょう。
+
+  ※本当はHEADを使って、簡単にnコミット前に戻すということもできますが、今回の研修ではrebaseやbranchの使い方などは除外しているためマージ後の樹形図がすこしごちゃごちゃしていると思います。ちょっとめんどうですがこのやり方でやってください。興味がある方は後述の[ProGit](https://github.com/dekokun/git/blob/master/WORkSHOP.md#%E3%82%88%E3%82%8A%E6%B7%B1%E3%82%81%E3%81%9F%E3%81%84%E4%BA%BA%E3%81%B8)を読んで、定番のワークフローを理解した後、自分で試すと良いでしょう。
 
   ```
   $ git resest <COMMITID> --soft
@@ -334,11 +342,16 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   $ git diff
   ```
 
-#### グループワーク
+## グループワーク
   チームリポジトリで共同作業を体験しましょう。
-  以下のテーマで各自READMEファイルを修正して、最終的に発表してもらいます。フォーマットは自由です。
+  以下のテーマで各自READMEファイルを修正して、最終的に発表してもらいます。
+  フォーマットは、テキスト形式で作成してください。
 
-  * チームメンバーの自己紹介(名前, 興味のあること。趣味なり技術ネタなり, 本日学習したことの感想 , 今後の抱負 )
+  * 自分の自己紹介
+    1. 名前
+    2. 興味のあること。趣味なり技術ネタなり
+    3. 本日学習したことの感想
+    4. 今後の抱負
   * 上記はチームメンバーが自分の文を編集してcommitしてください
   * チームリーダーは、以下の総括についてもまとめてください。
     1. VCSの利点 チームとしての総括まとめ
@@ -350,9 +363,16 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
     2. チームリーダーは自己紹介+チーム総括を発表します。
 
   各自でコンフリクトがおきたさいは解決して中央リポジトリに反映を行い共同作業を行なってください。
-  余力があるチームは[ markdown ](http://blog.2310.net/archives/6)を使い、シンプルでリッチなREADMEを作成してくみてください。
 
-### より深めたい人へ
+  * 余力があるチームへ
+
+   余力があるチームは[ markdown ](http://blog.2310.net/archives/6)を使い、シンプルでリッチなREADMEを作成してくみてください。
+
+  * さらに余力があるハカー的なチームへ
+
+  [ OneMoreThing ](https://github.com/dekokun/git/blob/master/one-more-thing.md)に記載されているTDDベースのcommit作業を行なってみてください。より実践的なGitの使い方が理解できます。
+
+## より深めたい人へ
  Pro Git(無料のPDF)は読みやすく、深めることができるので興味があるひとは読んで見ることをおすすめします！
 * [Pro Git](https://docs.google.com/file/d/0BxkaLAGEeWgLNDRhYzQ3MDgtNmQ1NC00ODZiLThmYzYtYmJlYWE5YzY2Mjkw/edit?hl=en&pli=1)
 
