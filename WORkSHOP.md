@@ -312,36 +312,6 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
 
   マージが完了したら、<code>git push origin master</code>して中央リポジトリに変更を反映してください。
 
-  * 巻き戻しあれこれ
-
-  ローカルで１コミット(編集→ add → commit ) 刻んで、巻き戻しのいろいろをやってみましょう。
-
-  commitログの書き直しをやってみてください。
-
-  ```
-  $ git commit --amend
-  ```
-
-  commitの巻き戻しをやってみましょう。<code>git log</code>, で直前のcommit ID(ハッシュ値)をコピーしておいてください。
-  --softは、commitを巻き戻してワークツリーには編集内容を残すというものです。
-
-  ※本当はHEADを使って、簡単にnコミット前に戻すということもできますが、今回の研修ではrebaseやbranchの使い方などは除外しているためマージ後の樹形図がすこしごちゃごちゃしていると思います。ちょっとめんどうですがこのやり方でやってください。興味がある方は後述の[ProGit](https://github.com/dekokun/git/blob/master/WORkSHOP.md#%E3%82%88%E3%82%8A%E6%B7%B1%E3%82%81%E3%81%9F%E3%81%84%E4%BA%BA%E3%81%B8)を読んで、定番のワークフローを理解した後、自分で試すと良いでしょう。
-
-  ```
-  $ git resest <COMMITID> --soft
-  $ git status
-  $ git diff
-  ```
-
-  もういちど、commitを行った後、commitの強制巻き戻しをやってみましょう。<code>git log</code>, で直前のcommit ID(ハッシュ値)をコピーしておいてください。
-  --hardは、commitを巻き戻してワークツリーの編集も強制的に巻き戻します。
-
-  ```
-  $ git resest <COMMITID> --hard
-  $ git status
-  $ git diff
-  ```
-
 ## グループワーク
   チームリポジトリで共同作業を体験しましょう。
   以下のテーマで各自READMEファイルを修正して、最終的に発表してもらいます。
