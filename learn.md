@@ -156,6 +156,8 @@
 * オープンソースの開発も結構この上で行われている
 * ソースコードの歴史などがWeb上で閲覧可能 例:https://github.com/dekokun/TDD/commits/master/test.js
 
+## 質問受付
+
 ## 開発/デザインに必須なバージョン管理
 
 ### 開発
