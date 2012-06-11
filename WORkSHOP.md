@@ -213,7 +213,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
 
   * 編集してcommitしてみよう:コミット
 
-  <code>git commit</code>でcommitできます。
+  <code>git commit -m 'XXXのための修正'</code>でcommitできます。
   ```
   $ git commit -m 'XXXXのための変更'
   [master 5e0cf17] XXXXのための変更
@@ -295,8 +295,8 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   no changes added to commit (use "git add" and/or "git commit -a")
   ```
 
-  表示されてるように<code>git add <FILE名></code>と打てばChange to be commitedになります。
-  そのまま<code>git commit</code>。エディタが起動してマージcommitログを刻めます。
+  表示されてるように<code>git add <FILE名></code>と打てば<code>Change to be commited</code>になります。
+  そのまま<code>git commit -m 'マージしたよ'</code>。エディタが起動してマージcommitログを刻めます。
 
   ```
   1 Merge branch 'master' of github.com:umiyosh/git into umiwk
