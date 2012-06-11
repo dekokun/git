@@ -116,9 +116,9 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/
   ```
   $ ssh-keygen -t rsa
   Generating public/private rsa key pair.
-  Enter file in which to save the key (/home/n99999/.ssh/id_rsa): →何も入力しないでEner
-   Enter passphrase (empty for no passphrase): →何も入力しないでEner
-   Enter same passphrase again:→何も入力しないでEner
+  Enter file in which to save the key (/home/n99999/.ssh/id_rsa): →何も入力しないでEnter
+   Enter passphrase (empty for no passphrase): →何も入力しないでEnter
+   Enter same passphrase again:→何も入力しないでEnter
    Your identification has been saved in /home/n99999/.ssh/id_rsa.
    Your public key has been saved in /home/n99999/.ssh/id_rsa.pub.
    The key fingerprint is:
