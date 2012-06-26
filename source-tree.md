@@ -19,7 +19,7 @@
   * どう連携するのか、ちょっとまだ私はよくわかってない…
   ![alt text](https://github.com/dekokun/git/blob/master/img/SourceTree02.png?raw=true)
 1. 次は多分こんな画面
-  * ここで、自分のgitリポジトリがあるディレクトリ(.gitファイルが存在するディレクトリ)を選択しましょう
+  * ここで、自分のgitリポジトリがあるディレクトリ(.gitディレクトリが存在するディレクトリ)を選択しましょう
   ![alt text](https://github.com/dekokun/git/blob/master/img/SourceTree03.png?raw=true)
 1. 次は多分こんな画面
   * 上記で登録したプロジェクトがあると思うので、そこでダブルクリックしましょう
